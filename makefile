@@ -1,6 +1,6 @@
 CC=g++
 CFLAGS=-c -Wall
-#ALL= prog
+
 
 main: main.o football_scoring.o temp_conv.o
 	$(CC) main.o football_scoring.o  temp_conv.o -o main
