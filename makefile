@@ -15,4 +15,4 @@ temp_conv.o: temp_conv.c
 	$(CC) $(CFLAGS) temp_conv.c 
 
 clean: 
-	rm -rf *.o prog
+	rm -rf *.o main

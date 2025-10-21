@@ -1,7 +1,6 @@
 #include <stdio.h>
-
-void football_scoring();
-void temp_conv();
+#include "football_scoring.h"
+#include "temp_conv.h"
 
 int main(){
 
