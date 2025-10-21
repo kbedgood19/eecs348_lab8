@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 void temp_conv(){
-        float temp, converted;
+    float temp, converted;
     char from, to;
 
     printf("Enter the temperature value: ");
@@ -27,7 +27,7 @@ void temp_conv(){
     else if (from == 'K' || from == 'k')
         celsius = temp - 273.15;
     else {
-        printf("Invalid original scale! Must be C, F, or K.\n");
+        printf("Invalid entry. Please enter C, F, or K.\n");
         return;
     }
 
@@ -39,7 +39,7 @@ void temp_conv(){
     else if (to == 'K' || to == 'k')
         converted = celsius + 273.15;
     else {
-        printf("Invalid target scale! Must be C, F, or K.\n");
+        printf("Invalid entry. Please enter C, F, or K.\n");
         return;
     }
 

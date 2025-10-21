@@ -25,6 +25,7 @@ void football_scoring(){
             printf("Invalid entry. Please try again.\n");
         }
         else{
+                printf("Possible combinations of scoring plays if a team's score is %d\n", score);
               for (int td2 = 0; td2 * 8 <= score; td2++) { // TD + 2pt
             for (int td1 = 0; td1 * 7 + td2 * 8 <= score; td1++) { // TD + FG
                 for (int td = 0; td * 6 + td1 * 7 + td2 * 8 <= score; td++) { // TD
