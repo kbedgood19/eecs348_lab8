@@ -6,44 +6,48 @@ void temp_conv(){
     float temp, converted;
     char from, to;
 
-    printf("Enter the temperature value: ");
-    if (scanf("%f", &temp) != 1) {
+    while (1) {
+        printf("Enter the temperature value: ");
+        if (scanf("%f", &temp) == 1) {break;}
         printf("Invalid input! Please enter a number.\n");
         while (getchar() != '\n'); 
-        return;
     }
 
-    printf("Enter the original scale (C, F, or K): ");
-    scanf(" %c", &from);
-    printf("Enter the scale to convert to (C, F, or K): ");
-    scanf(" %c", &to);
+
+    while (1) {
+        printf("Enter the original scale (C, F, or K): ");
+        scanf(" %c", &from);
+        if (from == 'C' || from == 'c' || from == 'F' || from == 'f' || from == 'K' || from == 'k')
+           { break;}
+        printf("Invalid entry. Please enter C, F, or K.\n");
+    }
+
+
+    while (1) {
+        printf("Enter the scale to convert to (C, F, or K): ");
+        scanf(" %c", &to);
+        if (to == 'C' || to == 'c' || to == 'F' || to == 'f' || to == 'K' || to == 'k')
+            break;
+        printf("Invalid entry. Please enter C, F, or K.\n");
+    }
 
     
     float celsius;
     if (from == 'C' || from == 'c')
-        celsius = temp;
+        {celsius = temp;}
     else if (from == 'F' || from == 'f')
-        celsius = (temp - 32) * 5.0 / 9.0;
-    else if (from == 'K' || from == 'k')
-        celsius = temp - 273.15;
-    else {
-        printf("Invalid entry. Please enter C, F, or K.\n");
-        return;
-    }
-
+        {celsius = (temp - 32) * 5.0 / 9.0;}
+    else
+        {celsius = temp - 273.15;}
    
     if (to == 'C' || to == 'c')
-        converted = celsius;
+        {converted = celsius;}
     else if (to == 'F' || to == 'f')
-        converted = celsius * 9.0 / 5.0 + 32;
-    else if (to == 'K' || to == 'k')
-        converted = celsius + 273.15;
-    else {
-        printf("Invalid entry. Please enter C, F, or K.\n");
-        return;
-    }
-
+        {converted = celsius * 9.0 / 5.0 + 32;}
+    else 
+        {converted = celsius + 273.15;}
    
+
     const char *category;
     const char *advice;
 
